@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+.active hr{
+    @apply block
+}
+*{
+    font-family: Outfit;
+}
+::-webkit-scrollbar{
+    @apply hidden
+}
+.test-scroll {
+   /* Fixed width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+}
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 10px 0;
+}
+
+.socialIcons li {
+    list-style: none;
+    font-size: 50px;
+}
+
+.insta {
+    border-radius: 14px;
+    color: white;
+    padding: 5px;
+    font-size: 35px;
+    background: linear-gradient(180deg, #4c568ac4, #5851DB, #833AB4, #c13584, #E1306c, #FD1D1D);
+}
+.facebook{
+    border-radius: 20px;
+    color: white;
+
+    font-size: 35px;
+    background: blue;
+}
+.whatsapp {
+    background-color: #4CAF50; /* Adjusted green color */
+    padding: 5px;
+    font-size: 35px;
+    border-radius: 25px;
+    color: white;
+}
+
+@media (max-width:740px){
+    .active p{
+        @apply text-white bg-[#5f6FFF];
+    }
+    .docc{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
