@@ -27,6 +27,10 @@ app.use('/api/v1/resumes',resumeRoutes);
 app.get('/',(req,res)=>{
     res.json({"message":"Welcome to resumatch api"});
 })
+
+app.get('*abc',(req,res)=>{
+    res.json("Page does not exists");
+})
 app.listen(port,()=>{
     console.log(`Server running at port ${port}`)
 })
