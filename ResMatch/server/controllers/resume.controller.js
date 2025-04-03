@@ -84,8 +84,30 @@ const uploadResume = async (req, res) => {
 
 const getAllResume = async (req, res) => {
     const jobId= req.params.jobId;
+    const {matchingExp, matchingEd, matchingSkills, sortByExp, sortByPSkills} = req.query;
     try{
-        const resumes= await resumeSchema.find({job_opening_id:jobId});
+        let resumes= await resumeSchema.find({job_opening_id:jobId});
+
+        if(matchingExp){
+            resumes=resumes.filter((val) => val?.parsed_data?.job_matching?.matching_required_experience);
+        }
+
+        if(matchingEd){
+            resumes=resumes.filter((val) => val?.parsed_data?.job_matching?.matching_required_education);
+        }
+        
+        if(matchingSkills){
+            resumes=resumes.filter((val) => (val?.parsed_data?.job_matching?.num_missing_required_skills==0));
+        }
+
+        if(sortByExp){
+            resumes.sort((a,b)=> b?.parsed_data?.total_experience - a?.parsed_data?.total_experience);
+        }
+
+        if(sortByPSkills){
+            resumes.sort((a,b) => b?.parsed_data?.job_matching?.num_matched_preferred_skills - a?.parsed_data?.job_matching?.num_matched_preferred_skills);
+        }
+
         return res.status(200).json({resumes});
     }catch(err){
         return res.status(500).json({"message":"Cannot Fetch"});
