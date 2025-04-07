@@ -1,0 +1,51 @@
+.dashboard-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .profile-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-info {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .info-item label {
+    font-weight: bold;
+    width: 120px;
+  }
+  
+  .settings-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .settings-form {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .save-btn {
+    background: var(--success);
+  }

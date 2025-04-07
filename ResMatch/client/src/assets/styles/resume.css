@@ -1,0 +1,315 @@
+
+.resume-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .resume-page h1 {
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .resume-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .candidate-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .candidate-info p {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.9;
+  }
+  
+  .resume-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .resume-actions .btn {
+    background-color: white;
+    color: var(--primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .resume-actions .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+  
+  .resume-grid {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .resume-section {
+    padding: 1.5rem;
+    background-color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .resume-section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray);
+    color: var(--dark);
+  }
+  
+  .resume-section h4 {
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--dark);
+  }
+  
+  .resume-section h4:first-of-type {
+    margin-top: 0;
+  }
+  
+  /* Make job matching section span full width */
+  .job-matching {
+    grid-column: span 2;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item label {
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  
+  .info-item span, .info-item a {
+    margin-top: 0.25rem;
+  }
+  
+  .info-item a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .skill-tag {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+  
+  .skill-tag.match {
+    background-color: var(--success);
+  }
+  
+  .skill-tag.missing {
+    background-color: var(--danger);
+  }
+  
+  .experience-list, .education-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .experience-item, .education-item {
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+  }
+  
+  .experience-item h4, .education-item h4 {
+    margin: 0;
+    color: var(--dark);
+  }
+  
+  .company, .duration {
+    margin: 0.25rem 0;
+    color: var(--gray);
+  }
+  
+  .matching-summary {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .matching-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: white;
+    position: relative;
+  }
+  
+  .matching-score::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .matching-score.excellent {
+    background-color: #4CC9F0;
+  }
+  
+  .matching-score.good {
+    background-color: #4895EF;
+  }
+  
+  .matching-score.average {
+    background-color: #F72585;
+  }
+  
+  .matching-score.poor {
+    background-color: #7209B7;
+  }
+  
+  .score-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .score-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .matching-details {
+    flex: 1;
+  }
+  
+  .skills-match, .qualification-match {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .match-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .match-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+  
+  .match-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+  }
+  
+  .match-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: inline-block;
+  }
+  
+  .match-status.match {
+    background-color: rgba(76, 201, 240, 0.2);
+    color: var(--success);
+  }
+  
+  .match-status.no-match {
+    background-color: rgba(247, 37, 133, 0.2);
+    color: var(--danger);
+  }
+  
+  .matched-skills-section {
+    margin-top: 2rem;
+  }
+  
+  .resume-error {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .resume-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .job-matching {
+      grid-column: span 1;
+    }
+    
+    .resume-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .candidate-info {
+      margin-bottom: 1rem;
+    }
+    
+    .matching-summary {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .skills-match, .qualification-match {
+      grid-template-columns: 1fr;
+    }
+  }
